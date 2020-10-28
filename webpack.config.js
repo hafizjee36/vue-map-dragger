@@ -1,5 +1,6 @@
 var path = require('path')
-var webpack = require('webpack')
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: './src/main.js',
@@ -7,6 +8,13 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'build.js'
+  },
+  resolve:{
+    modules: [__dirname, 'node_modules'],
+    alias: {
+      // "jquery" : "jquery/src/jquery",
+      // "jquery.pep" : path.join(__dirname,"bower_components/pep/src/jquery.pep.js")
+    }
   },
   module: {
     rules: [
